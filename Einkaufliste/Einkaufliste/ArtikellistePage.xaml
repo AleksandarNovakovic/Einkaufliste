@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Einkaufliste.ArtikellistePage">
+    <ContentPage.Content>
+
+        <StackLayout Padding="5" BackgroundColor="Wheat">
+
+            <Label 
+                Text="Ihre Artikelliste besteht aus:"
+                VerticalOptions="Start"
+                HorizontalOptions="CenterAndExpand"
+                FontSize="Large"
+                BackgroundColor="Black"
+                TextColor="White"
+                FontAttributes="Bold,Italic"
+                Padding="5"/>
+
+            <ListView x:Name="ListViewArtikelliste" ItemTapped="ListViewArtikelliste_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell Text="{Binding Name}" Detail="{Binding Beschreibung}" ImageSource="{Binding Bild}" />
+                        <!--<TextCell Text="{Binding Name}" Detail="{Binding Beschreibung}"  />-->
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <ImageButton
+                x:Name="BtnNeueArtikel"
+                Source="artikelhinzufuegen"
+                WidthRequest="120"
+                HeightRequest="100"
+                Aspect="Fill"
+                Clicked="BtnNeueArtikel_Clicked"
+                HorizontalOptions="Center"
+                VerticalOptions="EndAndExpand"  />
+
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

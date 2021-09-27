@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Einkaufliste.MainPage">
+
+    <StackLayout Padding="5" BackgroundColor="Wheat">
+
+        <Label 
+            Text="Einkaufsliste" 
+            VerticalOptions="Start" 
+            HorizontalOptions="CenterAndExpand"
+            FontSize="Title"
+            BackgroundColor="Black"
+            TextColor="White"
+            FontAttributes="Bold,Italic"
+            Padding="5" />
+
+        <ListView x:Name="ListViewEinkaufsliste" ItemTapped="ListViewEinkaufsliste_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="{Binding Bild}" WidthRequest="100" />
+                            
+                            <StackLayout>
+                                <Label Text="{Binding Name}" FontAttributes="Bold" TextColor="Red"/>
+                                <Label Text="{Binding Beschreibung}" />
+                            </StackLayout>
+
+                            <!--<Label x:Name="LabelAnzahl" Text="{Binding Anzahl, StringFormat='{0} : Anzahl'}"  VerticalOptions="Center" HorizontalOptions="EndAndExpand"/>-->
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <ImageButton
+            x:Name="BtnArtikelliste"
+            Source="einkaufsliste"
+            WidthRequest="120"
+            HeightRequest="100"
+            Aspect="Fill" 
+            HorizontalOptions="Center"
+            VerticalOptions="EndAndExpand"
+            Clicked="BtnArtikelliste_Clicked"/>
+
+    </StackLayout>
+
+</ContentPage>

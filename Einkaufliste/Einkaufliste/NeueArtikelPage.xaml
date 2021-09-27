@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Einkaufliste.NeueArtikelPage">
+    <ContentPage.Content>
+
+        <StackLayout Padding="5" BackgroundColor="Wheat">
+            
+            <Label Text="Neue Artikel"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand"
+                BackgroundColor="Black"
+                TextColor="White"
+                FontSize="Large" 
+                FontAttributes="Bold,Italic"
+                Padding="5" />
+
+            <Image x:Name="ImageNeue" WidthRequest="150" HeightRequest="150"/>
+
+            <StackLayout VerticalOptions="CenterAndExpand">
+
+                <StackLayout Orientation="Horizontal"  Margin="5">
+                    <Label 
+                        Text="Name: "
+                        VerticalOptions="Center"
+                        HorizontalOptions="Start"
+                        FontSize="Large"
+                        Padding="5"
+                        BackgroundColor="White"
+                        FontAttributes="Bold,Italic"/>
+                    
+                    <Entry
+                        x:Name="EntryNeueArtikelName" 
+                        HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="5">
+                    <Label
+                        Text="Beschreibung: "
+                        VerticalOptions="Center"
+                        HorizontalOptions="Start"
+                        FontSize="Large"
+                        Padding="5"
+                        BackgroundColor="White"
+                        FontAttributes="Bold,Italic"/>
+
+                    <Entry
+                        x:Name="EntryNeueArtikelBeschreibung"
+                        HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+
+
+                <StackLayout x:Name="httpImageEigabe" Orientation="Horizontal" Margin="5">
+                    <Label
+                        Text="http: "
+                        VerticalOptions="Center"
+                        HorizontalOptions="Start"
+                        FontSize="Large"
+                        Padding="5"
+                        BackgroundColor="White"
+                        FontAttributes="Bold,Italic"/>
+
+                    <Entry
+                        x:Name="EntryNeueImageLink"
+                        HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+                
+                <Button x:Name="BtnAuswaehlenPhoto" Text="Bild auswählen" Clicked="BtnAuswaehlenPhoto_Clicked"/>
+                <Button x:Name="BtnAufnehmenPhoto" Text="Bild aufnehmen" Clicked="BtnAufnehmenPhoto_Clicked"/>
+                
+            </StackLayout>
+
+            <Button
+                x:Name="BtnHinzufuegen"
+                Text="Hinzufügen"
+                Clicked="BtnHinzufuegen_Clicked"
+                HorizontalOptions="Center"
+                VerticalOptions="EndAndExpand"
+                BackgroundColor="Red"/>
+            
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

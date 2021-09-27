@@ -18,13 +18,14 @@
             FontAttributes="Bold,Italic"
             Padding="5" />
 
+        <!--Fabian-->
         <ListView x:Name="ListViewEinkaufsliste" ItemTapped="ListViewEinkaufsliste_ItemTapped">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal">
                             <Image Source="{Binding Bild}" WidthRequest="100" />
-                            
+
                             <StackLayout>
                                 <Label Text="{Binding Name}" FontAttributes="Bold" TextColor="Red"/>
                                 <Label Text="{Binding Beschreibung}" />

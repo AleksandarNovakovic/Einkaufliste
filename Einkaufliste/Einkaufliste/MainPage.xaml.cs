@@ -63,7 +63,7 @@ namespace Einkaufliste
 
         async private void LadeneEinkaufsliste()
         {
-            if (await DisplayAlert("Frage?", "Liste laden?", "JA", "NEIN"))
+            if (await DisplayAlert("Frage?", "Liste laden?", "Ja", "Nein"))
             {
                 string jsonString = Application.Current.Properties[MainPage.einkaufslisteKey] as string;
                 einkaufsliste = JsonConvert.DeserializeObject<ObservableCollection<Artikel>>(jsonString);

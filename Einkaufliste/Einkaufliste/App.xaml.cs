@@ -18,9 +18,7 @@ namespace Einkaufliste
             MainPage = new NavigationPage(new MainPage());
 
             //DeleteArtikelliste();
-
             LadenArtikelliste();
-
         }
 
         async private void LadenArtikelliste()

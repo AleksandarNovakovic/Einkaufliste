@@ -21,18 +21,7 @@
         <ListView x:Name="ListViewEinkaufsliste" ItemTapped="ListViewEinkaufsliste_ItemTapped">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ViewCell>
-                        <StackLayout Orientation="Horizontal">
-                            <Image Source="{Binding Bild}" WidthRequest="100" />
-
-                            <StackLayout>
-                                <Label Text="{Binding Name}" FontAttributes="Bold" TextColor="Red"/>
-                                <Label Text="{Binding Beschreibung}" />
-                            </StackLayout>
-
-                            <!--<Label x:Name="LabelAnzahl" Text="{Binding Anzahl, StringFormat='{0} : Anzahl'}"  VerticalOptions="Center" HorizontalOptions="EndAndExpand"/>-->
-                        </StackLayout>
-                    </ViewCell>
+                    <ImageCell Text="{Binding Name}" Detail="{Binding Beschreibung}" ImageSource="{Binding Bild}" />
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
@@ -50,3 +39,17 @@
     </StackLayout>
 
 </ContentPage>
+<!--<ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="{Binding Bild}" WidthRequest="100" />
+
+                            <StackLayout>
+                                <Label Text="{Binding Name}" FontAttributes="Bold" TextColor="Red"/>
+                                <Label Text="{Binding Beschreibung}" />
+                            </StackLayout>
+
+                            -->
+<!--<Label x:Name="LabelAnzahl" Text="{Binding Anzahl, StringFormat='{0} : Anzahl'}"  VerticalOptions="Center" HorizontalOptions="EndAndExpand"/>-->
+<!--
+                        </StackLayout>
+                    </ViewCell>-->

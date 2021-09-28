@@ -21,6 +21,7 @@ namespace Einkaufliste
             InitializeComponent();
 
             ListViewArtikelliste.ItemsSource = artikelliste.OrderBy(x => x.Name);
+
         }
 
         private void BtnNeueArtikel_Clicked(object sender, EventArgs e)

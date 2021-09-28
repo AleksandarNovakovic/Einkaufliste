@@ -69,7 +69,7 @@ namespace Einkaufliste
 
             if (bild != null)
             {
-                bild.FileName = EntryNeueArtikelBeschreibung.Text;
+                //bild.FileName = EntryNeueArtikelBeschreibung.Text;
 
                 var bildZeigen = await bild.OpenReadAsync();
 
@@ -84,7 +84,7 @@ namespace Einkaufliste
         {
             var bild = await MediaPicker.CapturePhotoAsync();
 
-            var image = bild.FullPath;
+            //var image = bild.FullPath;
 
             if (bild != null)
             {

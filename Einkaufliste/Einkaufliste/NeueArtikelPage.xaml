@@ -68,8 +68,15 @@
                         HorizontalOptions="FillAndExpand"/>
                 </StackLayout>
                 
-                <Button x:Name="BtnAuswaehlenPhoto" Text="Bild auswählen" Clicked="BtnAuswaehlenPhoto_Clicked"/>
-                <Button x:Name="BtnAufnehmenPhoto" Text="Bild aufnehmen" Clicked="BtnAufnehmenPhoto_Clicked"/>
+                <Button 
+                    x:Name="BtnAuswaehlenPhoto" 
+                    Text="Bild auswählen" 
+                    Clicked="BtnAuswaehlenPhoto_Clicked"/>
+                
+                <Button 
+                    x:Name="BtnAufnehmenPhoto" 
+                    Text="Bild aufnehmen" 
+                    Clicked="BtnAufnehmenPhoto_Clicked"/>
                 
             </StackLayout>
 

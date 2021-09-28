@@ -16,10 +16,8 @@ namespace Einkaufliste
     public partial class MainPage : ContentPage
     {
         public static ObservableCollection<Artikel> einkaufsliste = new ObservableCollection<Artikel>();
-
-        public static ObservableCollection<Warenkorb> warenkorbliste = new ObservableCollection<Warenkorb>();
-
         public const string einkaufslisteKey = "Einkaufsliste";
+
         public int Anzahl { get; set; }
 
         public MainPage()
@@ -30,55 +28,7 @@ namespace Einkaufliste
             {
                 LadeneEinkaufsliste();
             }
-
         }
-
-        //private void WarenkorbFuelen()
-        //{
-        //    warenkorbliste.Clear();
-        //    const int anzahl = 1;
-        //    Warenkorb wk = new Warenkorb();
-
-
-        //    for (int i = 0; i < einkaufsliste.Count; i++)
-        //    {
-        //        if (einkaufsliste.Count == 0)
-        //        {
-        //            break;
-        //        }
-
-        //        if (warenkorbliste.Count == 0)
-        //        {
-        //            wk.Name = einkaufsliste[i].Name;
-        //            wk.Beschreibung = einkaufsliste[i].Beschreibung;
-        //            wk.Bild = einkaufsliste[i].Bild;
-        //            wk.Anzahl = anzahl;
-        //            warenkorbliste.Add(wk);
-
-        //        }
-        //        else
-        //        {
-        //            for (int j = 0; j < warenkorbliste.Count; j++)
-        //            {
-        //                if (warenkorbliste[j].Name == einkaufsliste[i].Name)
-        //                {
-        //                    warenkorbliste[j].Anzahl += 1;
-                           
-        //                }
-        //                else
-        //                {
-        //                    wk.Name = einkaufsliste[i].Name;
-        //                    wk.Beschreibung = einkaufsliste[i].Beschreibung;
-        //                    wk.Bild = einkaufsliste[i].Bild;
-        //                    wk.Anzahl = anzahl;
-        //                    warenkorbliste.Add(wk);
-        //                }
-        //            }
-        //        }
-        //    }
-
-        //}
-
 
         private void BtnArtikelliste_Clicked(object sender, EventArgs e)
         {
@@ -108,9 +58,6 @@ namespace Einkaufliste
 
         protected override void OnAppearing()
         {
-            //WarenkorbFuelen();
-            //ListViewEinkaufsliste.ItemsSource = warenkorbliste;
-
             ListViewEinkaufsliste.ItemsSource = einkaufsliste;
         }
 
@@ -127,9 +74,6 @@ namespace Einkaufliste
                 Application.Current.Properties.Remove(MainPage.einkaufslisteKey);
                 await Application.Current.SavePropertiesAsync();
             }
-
-            //WarenkorbFuelen();
-            //ListViewEinkaufsliste.ItemsSource = warenkorbliste;
 
             ListViewEinkaufsliste.ItemsSource = einkaufsliste;
         }

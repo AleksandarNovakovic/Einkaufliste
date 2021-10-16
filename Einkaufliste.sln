@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29519.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Einkaufliste.Android", "Einkaufliste\Einkaufliste.Android\Einkaufliste.Android.csproj", "{EF36D72D-37B9-433B-AFDB-26DFF36510D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Einkaufliste", "Einkaufliste\Einkaufliste\Einkaufliste.csproj", "{831D3A7F-6B22-4407-ADA0-D5ACCAB90962}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Einkaufliste", "Einkaufliste\Einkaufliste\Einkaufliste.csproj", "{831D3A7F-6B22-4407-ADA0-D5ACCAB90962}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
